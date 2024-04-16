@@ -1,1 +1,2 @@
-Hello, this is the scripting file
+#!/bin/bash
+echo "Hello, i am learning Devops"
