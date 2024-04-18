@@ -15,7 +15,7 @@ VALIDATE(){
  echo "what are you doing:$2"
 }
 
-dnf install mysql -y
+dnf install mysqll -y
 VALIDATE $? "Installing MySQL"
 
 dnf install git -y
