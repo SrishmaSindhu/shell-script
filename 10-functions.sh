@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPTNAME=$(echo $0 | cut -d "." f1)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/temp/$TIMESTAMP-$SCRIPTNAME.log
 
 if [ $USERID -ne 0 ]
