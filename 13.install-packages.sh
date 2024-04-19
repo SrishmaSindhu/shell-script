@@ -10,7 +10,7 @@ y=\e[33m
 N=\e[0m
 
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then 
     echo "need root access"
     exit 1
