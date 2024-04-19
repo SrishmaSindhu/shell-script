@@ -1,8 +1,8 @@
 #!/bin/bash
 
 USERID=$(id -u)
-TIMESTAMP=$(date | cut -d "." -f1)
-SCRIPTNAME=$($0)
+TIMESTAMP=$(date +%F-%H-%M-%s)
+SCRIPTNAME=$( echo $0 | cut -d "." -f1 )
 LOGFILE=$TIMESTAMP-$SCRIPTNAME.log
 R=\e[31m
 G=\e[32m
@@ -38,7 +38,6 @@ do
   else
      dnf install $i -y &>>$LOGFILE
      VALIDATE $? "Installation of $i"
-     
 done  
 
 
