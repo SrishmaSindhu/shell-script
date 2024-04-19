@@ -6,7 +6,7 @@ SCRIPTNAME=$( echo $0 | cut -d "." -f1 )
 LOGFILE=$TIMESTAMP-$SCRIPTNAME.log
 R="\e[31m"
 G="\e[32m"
-y="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 
@@ -34,7 +34,7 @@ do
   dnf list installed $i &>>$LOGFILE
   if [ $? -eq 0 ]
   then 
-     echo -e  "$i already installed..$Y SKIPPING $N"
+     echo -e  "$i already installed.. $Y SKIPPING $N"
   else
      dnf install $i -y &>>$LOGFILE
      VALIDATE $? "Installation of $i"
