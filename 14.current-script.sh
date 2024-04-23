@@ -3,6 +3,7 @@
 
 variable="Hi"
 echo "before calling other script:$variable"
+echo "process instance id of current script:$$"
 
 
 ./15.other-script.sh
