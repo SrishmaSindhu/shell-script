@@ -8,7 +8,7 @@ N="\e[0m"
 
 if [ -d $SOURCE_DIRECTORY ]
 then
-   echo -e "$G source directory exist"
+   echo -e "$G source directory exist $N"
 else
    echo  -e "$R Please make sure $SOURCE_DIRECTORY exists $N"
    exit 1
@@ -19,4 +19,5 @@ echo  "Files to delete: $FILES"
  while IFS= read -r line
  do
     echo "Deleting file: $line"
+    rm -rf $line
  done <<< $FILES
