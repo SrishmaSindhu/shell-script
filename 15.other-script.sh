@@ -1,3 +1,2 @@
 variable="Hello"
-
-echo "other-script:$variable"
+echo " other script:$variable"

@@ -2,9 +2,9 @@
 
 
 variable="Hi"
-echo "current script"
-echo "variable do not changed:$variable"
+echo "before calling other script:$variable"
+
 
 ./15.other-script.sh
 
-echo "variable changed:$variable"
+echo "after calling other script:$variable"
